@@ -1,16 +1,16 @@
 
 #cloud-config
-users:
-  - name: ubuntu
-    sudo: ALL=(ALL) NOPASSWD:ALL
-    groups: users, admin
-    home: /home/ubuntu
-    shell: /bin/bash
-    ssh_authorized_keys:
+users: #Benutzerliste
+  - name: ubuntu #Benutzername
+    sudo: ALL=(ALL) NOPASSWD:ALL #
+    groups: users, admin #Gruppen vom benutzer
+    home: /home/ubuntu #home verzeichnis
+    shell: /bin/bash #shell Verzeichnis
+    ssh_authorized_keys: #erlaubten keys
     - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCFlocFptVmDM+2LZKAd7DqwGuyPRCK0YSe6YEkrIFS9lTXi3y+Ims3rymZXJr05Ayy20Gy7oa9K5h1da9Ne7d0qRKhPig3SAoP+4eeqAnZEEVY9lyHM17wr48QQHHkfxXdaVhYfslxwM0ItmDYm1lfUw0TenWQS7BgJ57jKvz85cibaxzGOG/t4o2TqXzBIYv8DPUI9qnrskWgTCm9CH0hXG/9c64rrgMNNxBKsPll6BUhGj4x9pVhB53uWJ8pdNP4sWc379kIgkFbujau687Nm3Yn9q46oHk7kjTR7emc/Y1GqLzdqRuKYoURpEv16GfbrpmclFYG5dTyUNGhMua1 aws-key
-ssh_pwauth: false
-disable_root: false 
-package_update: true
-packages:
+ssh_pwauth: false #ssh passwort auth ist falsch
+disable_root: false #rood deaktivierung ist falsch
+package_update: true #package aktualisierung ist true
+packages: #packages
   - curl 
   - wget
