@@ -16,6 +16,7 @@ packages:
 - php
 - libapache2-mod-php
 - adminer
+- php-mysqli
 write_files:
 - path: /var/www/html/db.php
   content: |
